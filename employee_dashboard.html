@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Employee Dashboard</title>
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/scripts.js"></script>
+</head>
+<body>
+<header class="employee">
+  <h1>Welcome, <!-- USER NAME --></h1>
+  <a href="logout.php">Logout</a>
+</header>
+
+<div class="container">
+  <h2>Request Leave</h2>
+  <form action="submit_leave.php" method="POST" onsubmit="return validateLeave()">
+    <label>Start Date</label>
+    <input type="date" name="start_date" id="start_date" required />
+
+    <label>End Date</label>
+    <input type="date" name="end_date" id="end_date" required />
+
+    <label>Reason</label>
+    <textarea name="reason" rows="3" placeholder="Reason for leave" required></textarea>
+
+    <button type="submit">Submit Leave Request</button>
+  </form>
+
+  <h2>Your Leave Requests</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Start Date</th><th>End Date</th><th>Reason</th><th>Status</th><th>Requested On</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- LEAVE REQUEST ROWS -->
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

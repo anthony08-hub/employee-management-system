@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Employee Signup</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="login-container">
+  <h2>Employee Signup</h2>
+  <form method="POST" action="signup.php">
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button type="submit">Sign Up</button>
+  </form>
+  <div id="error-message" style="color:red; font-size:0.9em; margin-top:5px;"></div>
+  <div style="margin-top:10px;">Already have an account? <a href="login.php">Login here</a></div>
+</div>
+</body>
+</html>
